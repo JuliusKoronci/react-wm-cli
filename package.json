@@ -1,0 +1,75 @@
+{
+  "name": "wm-cli",
+  "version": "1.0.0",
+  "description": "An interactive CLI to create basic project structure for React applications",
+  "main": "dist/wm-cli.js",
+  "bin": {
+    "wm-cli": "./dist/wm-cli.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "tsc": "tsc -d",
+    "start": "npm run lint && npm run tsc",
+    "watch": "watch 'npm run start' ./src",
+    "build": "npm run start",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --fix --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/fs-extra": "^5.0.1",
+    "@types/inquirer": "^0.0.38",
+    "chalk": "^2.3.2",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "commander": "^2.15.0",
+    "configstore": "^3.1.1",
+    "core-js": "^2.5.3",
+    "figlet": "^1.2.0",
+    "fs-extra": "^5.0.0",
+    "inquirer": "^5.1.0",
+    "lodash": "^4.17.5",
+    "minimist": "^1.2.0",
+    "mustache": "^2.3.0",
+    "touch": "^3.1.0",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.46",
+    "@types/enzyme": "^3.1.9",
+    "@types/jest": "^22.2.0",
+    "@types/lodash": "^4.14.105",
+    "@types/mustache": "^0.8.30",
+    "awesome-typescript-loader": "^4.0.1",
+    "enzyme": "^3.3.0",
+    "jest": "^22.4.2",
+    "source-map-loader": "^0.2.3",
+    "ts-jest": "^22.4.1",
+    "tslint": "^4.5.1",
+    "tslint-config-airbnb": "^5.7.0",
+    "watch": "^1.0.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/../node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "rootDir": "src",
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/**/*.schema.ts",
+      "!src/schema/*.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}

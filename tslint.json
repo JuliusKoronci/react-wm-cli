@@ -1,0 +1,10 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:latest",
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "no-console": "off"
+  }
+}
